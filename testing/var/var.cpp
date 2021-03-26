@@ -22,6 +22,15 @@ class Str{
         }
 
         size_t length();
+        char* capitalize();
+        char* casefold();
+        size_t count(char val);
+        bool endswith(char val);
+        bool startswith(char val);
+        size_t find(char val);
+        size_t index(char val);
+        char* join(char *str2);
+        char* replace(char val, char rep);
 };
 typedef Str String;
 
@@ -38,10 +47,42 @@ size_t Str::length(){
 }
 
 
+char* String::capitalize(){
+    value[0] = toupper(value[0]);
+
+    return value;
+}
+
+char* String::casefold(){
+    for(int i = 0; i < value[i] != '\0'; i++){
+        value[i] = tolower(value[i]);
+    }
+
+    return value;
+}
+
+
+bool String::endswith(char val){
+    size_t size = 0;
+
+    for(int i = 0; value[i] != '\0'; i++){
+        size++;
+    }
+
+    if(value[size-1] == val){
+        return true;
+    }
+
+    return false;
+}
+
 int main(void){
-    String str = Str("whatever");
+    String str = Str("whAtever");
 
     cout << str.value << endl;
     cout << str.length() << endl;
+    cout << str.capitalize() << endl;
+    cout << str.casefold() << endl;
+    cout << str.endswith('r') << endl;
 
 }
