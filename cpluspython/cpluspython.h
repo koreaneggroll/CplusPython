@@ -10,11 +10,11 @@
 
 
 //DEFINES
-#define and &&
-#define or ||
-#define in ,
-#define is ==
-#define isnt !=
+#define AND &&
+#define OR ||
+#define IN ,
+#define IS ==
+#define ISNT !=
 
 
 //CLASSES
