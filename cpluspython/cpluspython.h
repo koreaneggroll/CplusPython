@@ -90,8 +90,16 @@ class Int_List{
         Int_List(int *array){
             value = array;
         }
-
+        //prints the list
         void print();
+        //adds an element to the end of the list
+        void append(int val);
+        //sets all of the arrays elements to 0
+        void clear();
+        //Copies 1 arrays elements into anothers
+        void copy();
+        //Returns the number of elements with the specified value
+        size_t count();
 };
 typedef Int_List Ilist;
 
