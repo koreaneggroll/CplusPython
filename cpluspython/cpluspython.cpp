@@ -134,6 +134,16 @@ char* String::replace(char val, char rep){
 
 
 
+char* String::upper(){
+    for(int i = 0; value[i] != '\0'; i++){
+        value[i] = toupper(value[i]);
+    }
+
+    return value;
+}
+
+
+
 void String::print(){
     cout << value << endl;
 }

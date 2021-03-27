@@ -25,7 +25,7 @@ class Int{
             value = val;
         }
 
-        //FOLLOWING FUNCTIONS ARE FOR THE C PROGRAMMING LANGUAGE
+        //FOLLOWING FUNCTIONS ARE FOR THE C PROGRAMMING LANGUAGE(don't really work)
         void print();
 };
 typedef Int integer;
@@ -58,8 +58,10 @@ class Str{
         char* join(char *str2);
         //Replaces every accurence of a character in a string with another replacement
         char* replace(char val, char rep);
+        //Returns an upper case version of the origin string
+        char* upper();
 
-        //FOLLOWING FUNCTIONS ARE FOR THE C PROGRAMMING LANGUAGE
+        //FOLLOWING FUNCTIONS ARE FOR THE C PROGRAMMING LANGUAGE(don't really work)
         void print();
 };
 typedef Str String;
