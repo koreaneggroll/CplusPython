@@ -65,3 +65,14 @@ bool String::startswith(char val){
 
     return false;
 }
+
+
+size_t String::find(char val){
+    for(int i = 0; i < value[i] != '\0'; i++){
+        if(value[i] == val){
+            return i;
+        }
+    }
+
+    return -1;
+}

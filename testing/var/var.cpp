@@ -76,6 +76,18 @@ bool String::endswith(char val){
     return false;
 }
 
+
+size_t String::find(char val){
+    for(int i = 0; i < value[i] != '\0'; i++){
+        if(value[i] == val){
+            return i;
+        }
+    }
+
+    return -1;
+}
+
+
 int main(void){
     String str = Str("whAtever");
 
@@ -84,5 +96,6 @@ int main(void){
     cout << str.capitalize() << endl;
     cout << str.casefold() << endl;
     cout << str.endswith('r') << endl;
+    cout << str.find('w') << endl;
 
 }
