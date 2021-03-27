@@ -88,8 +88,38 @@ size_t String::find(char val){
 }
 
 
+
+
+class Chr{
+    public:
+        char value;
+
+        Chr(char val){
+            value = val;
+        }
+
+
+};
+typedef Chr Char;
+
+
+
+char ord(int ascii){
+    return (char)ascii;
+}
+
+
+int chr(char c){
+    return (int)c;
+}
+
+
+
 int main(void){
     String str = Str("whAtever");
+    Char character = Char('2');
+
+    cout << character.value << endl;
 
     cout << str.value << endl;
     cout << str.length() << endl;

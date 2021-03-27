@@ -68,6 +68,29 @@ typedef Str String;
 
 
 
+class Chr{
+    public:
+        char value;
+
+        Chr(char val){
+            value = val;
+        }
+
+
+};
+typedef Chr Char;
+
+
+
+
+
+//FUNCTIONS
+//Converts from ascii to character
+char ord(int ascii);
+//Converts from character to ascii
+int chr(char c);
+
+
 
 #endif //C_PLUS_PYTHON
 //Header guard end

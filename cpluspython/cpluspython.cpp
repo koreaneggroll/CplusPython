@@ -114,22 +114,13 @@ char* String::join(char *str2){
 
 
 char* String::replace(char val, char rep){
-    char *str = (char*)malloc(sizeof(value));
-    
-    if(!str){
-        cout << "\n\nERROR: Couldn't allocate memory. replace()\n" << endl;
-        exit(1);
-    }
-
     for(int i = 0; value[i] != '\0'; i++){
         if(value[i] == val){
             value[i] = rep;
         }   
     }
 
-    strcat(str, value);
-
-    return str;
+    return value;
 }
 
 
@@ -146,4 +137,17 @@ char* String::upper(){
 
 void String::print(){
     cout << value << endl;
+}
+
+
+
+
+//FUNCTIONS
+char ord(int ascii){
+    return (char)ascii;
+}
+
+
+int chr(char c){
+    return (int)c;
 }
