@@ -3,12 +3,16 @@
 using namespace std;
 
 
+//INT DATATYPE
 
 void Int::print(){
     cout << value << endl;
 }
 
+//INT DATATYPE END
 
+
+//STRING DATATYPE
 
 size_t String::length(){
     size_t len = 0;
@@ -139,6 +143,26 @@ void String::print(){
     cout << value << endl;
 }
 
+
+//STRING DATATYPE END
+
+
+
+
+//INT_ARR DATATYPE
+
+void Int_List::print(){
+    int size = sizeof(value)/sizeof(*value);
+
+    for(int i = 0 ; i < size + 1; i++){
+        cout << "[" << value[i] << "]" << ", ";
+    }
+}
+
+
+
+
+//INT_ARR DATATYPE END
 
 
 

@@ -115,17 +115,33 @@ int chr(char c){
 
 
 
+
+
+class Int_List{
+    public:
+        int *value;
+
+        Int_List(int *array){
+            value = array;
+        }
+
+        void print();
+};
+typedef Int_List Ilist;
+
+
+void Int_List::print(){
+    int size = sizeof(value)/sizeof(*value);
+
+    for(int i = 0 ; i < size + 1; i++){
+        cout << "[" << value[i] << "]" << ", ";
+    }
+}
+
+
 int main(void){
-    String str = Str("whAtever");
-    Char character = Char('2');
+    int arr[] = {1, 2, 3};
+    Ilist list = Int_List(arr);
 
-    cout << character.value << endl;
-
-    cout << str.value << endl;
-    cout << str.length() << endl;
-    cout << str.capitalize() << endl;
-    cout << str.casefold() << endl;
-    cout << str.endswith('r') << endl;
-    cout << str.find('w') << endl;
-
+    list.print();
 }

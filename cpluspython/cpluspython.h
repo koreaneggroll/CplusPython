@@ -83,6 +83,21 @@ typedef Chr Char;
 
 
 
+class Int_List{
+    public:
+        int *value;
+
+        Int_List(int *array){
+            value = array;
+        }
+
+        void print();
+};
+typedef Int_List Ilist;
+
+
+
+
 
 //FUNCTIONS
 //Converts from ascii to character
