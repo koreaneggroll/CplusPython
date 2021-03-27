@@ -76,3 +76,13 @@ size_t String::find(char val){
 
     return -1;
 }
+
+size_t String::index(char val){
+    for(int i = 0; i < value[i] != '\0'; i++){
+        if(value[i] == val){
+            return i;
+        }
+    }
+
+    return -1;
+}
