@@ -93,7 +93,7 @@ char* String::join(char *str2){
     char *str3 = (char*)malloc(sizeof(value) + sizeof(str2));
 
     if(!str3){
-        cout << "ERROR: Couldn't allocat memory. join()" << endl;
+        cout << "\n\nERROR: Couldn't allocate memory. join()\n" << endl;
         exit(1);
     }
 
@@ -101,4 +101,25 @@ char* String::join(char *str2){
     strcat(str3, str2);
 
     return str3;
+}
+
+
+
+char* String::replace(char val, char rep){
+    char *str = (char*)malloc(sizeof(value));
+    
+    if(!str){
+        cout << "\n\nERROR: Couldn't allocate memory. replace()\n" << endl;
+        exit(1);
+    }
+
+    for(int i = 0; value[i] != '\0'; i++){
+        if(value[i] == val){
+            value[i] = rep;
+        }   
+    }
+
+    strcat(str, value);
+
+    return str;
 }
