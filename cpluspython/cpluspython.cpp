@@ -1,5 +1,6 @@
 #include "./cpluspython.h"
 
+using namespace std;
 
 size_t String::length(){
     size_t len = 0;
@@ -85,4 +86,19 @@ size_t String::index(char val){
     }
 
     return -1;
+}
+
+
+char* String::join(char *str2){
+    char *str3 = (char*)malloc(sizeof(value) + sizeof(str2));
+
+    if(!str3){
+        cout << "ERROR: Couldn't allocat memory. join()" << endl;
+        exit(1);
+    }
+
+    strcpy(str3, value);
+    strcat(str3, str2);
+
+    return str3;
 }
