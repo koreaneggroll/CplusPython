@@ -24,6 +24,9 @@ class Int{
         Int(int val){
             value = val;
         }
+
+        //FOLLOWING FUNCTIONS ARE FOR THE C PROGRAMMING LANGUAGE
+        void print();
 };
 typedef Int integer;
 
@@ -55,6 +58,9 @@ class Str{
         char* join(char *str2);
         //Replaces every accurence of a character in a string with another replacement
         char* replace(char val, char rep);
+
+        //FOLLOWING FUNCTIONS ARE FOR THE C PROGRAMMING LANGUAGE
+        void print();
 };
 typedef Str String;
 

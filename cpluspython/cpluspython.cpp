@@ -2,6 +2,14 @@
 
 using namespace std;
 
+
+
+void Int::print(){
+    cout << value << endl;
+}
+
+
+
 size_t String::length(){
     size_t len = 0;
     
@@ -122,4 +130,10 @@ char* String::replace(char val, char rep){
     strcat(str, value);
 
     return str;
+}
+
+
+
+void String::print(){
+    cout << value << endl;
 }
