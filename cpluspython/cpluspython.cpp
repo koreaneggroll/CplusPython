@@ -168,6 +168,15 @@ void Int_List::append(int val){
 }
 
 
+void Int_List::clear(){
+    int size = sizeof(value)/sizeof(*value);
+
+    for(int i = 0; i < size+1; i++){
+        value[i] = '\0';
+    }
+}
+
+
 
 //INT_ARR DATATYPE END
 
