@@ -126,6 +126,7 @@ class Int_List{
         }
 
         void print();
+        void append(int value);
 };
 typedef Int_List Ilist;
 
@@ -139,9 +140,22 @@ void Int_List::print(){
 }
 
 
+
+void Int_List::append(int val){
+    int size = sizeof(value)/sizeof(*value);
+
+    value[size+1] = val;
+}
+
+
+
 int main(void){
-    int arr[] = {1, 2, 3};
+    int arr[4] = {1, 2, 3};
     Ilist list = Int_List(arr);
 
     list.print();
+    list.append(2);
+    cout << endl;
+    list.print();
+    
 }

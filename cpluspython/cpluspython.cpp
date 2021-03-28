@@ -161,8 +161,18 @@ void Int_List::print(){
 
 
 
+void Int_List::append(int val){
+    int size = sizeof(value)/sizeof(*value);
+
+    value[size+1] = val;
+}
+
+
 
 //INT_ARR DATATYPE END
+
+
+
 
 
 
