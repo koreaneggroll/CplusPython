@@ -97,7 +97,7 @@ class Int_List{
         //sets all of the arrays elements to 0
         void clear();
         //Copies 1 arrays elements into anothers
-        void copy();
+        void copy(int *dest);
         //Returns the number of elements with the specified value
         size_t count();
 };

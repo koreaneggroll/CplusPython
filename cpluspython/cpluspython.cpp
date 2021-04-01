@@ -178,6 +178,16 @@ void Int_List::clear(){
 
 
 
+void Int_List::copy(int *dest){
+    int size = sizeof(value)/sizeof(*value);
+
+    for(int i = 0; i < size+1; i++){
+        dest[i] = value[i];
+    }
+}
+
+
+
 //INT_ARR DATATYPE END
 
 

@@ -128,6 +128,7 @@ class Int_List{
         void print();
         void append(int value);
         void clear();
+        void copy(int *dest);
 };
 typedef Int_List Ilist;
 
@@ -158,17 +159,24 @@ void Int_List::clear(){
 }
 
 
+void Int_List::copy(int *dest){
+    int size = sizeof(value)/sizeof(*value);
+
+    for(int i = 0; i < size+1; i++){
+        dest[i] = value[i];
+    }
+}
+
+
 
 int main(void){
     int arr[4] = {1, 2, 3};
+    int arr2[4];
     Ilist list = Int_List(arr);
+    Ilist list2 = Int_List(arr2);
 
-    list.print();
-    list.append(2);
-    cout << endl;
-    list.print();
-    list.clear();
-    cout << endl;
-    list.print();
+    list.copy(arr2);
+    list2.print();
+    
     
 }
