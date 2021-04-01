@@ -99,7 +99,7 @@ class Int_List{
         //Copies 1 arrays elements into anothers
         void copy(int *dest);
         //Returns the number of elements with the specified value
-        size_t count();
+        size_t count(int value);
 };
 typedef Int_List Ilist;
 

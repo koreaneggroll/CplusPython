@@ -188,6 +188,22 @@ void Int_List::copy(int *dest){
 
 
 
+size_t Int_List::count(int val){
+    size_t size = sizeof(value)/sizeof(*value);
+    size_t count = 0;
+
+    for(int i = 0; i < size+1; i++){
+        if(value[i] == val){
+            count++;
+        }
+    }
+
+
+    return count;
+}
+
+
+
 //INT_ARR DATATYPE END
 
 
