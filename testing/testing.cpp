@@ -233,8 +233,8 @@ void print(char *format, ...){
                                 char char_to_print = va_arg(argp, int);
                                 putchar(char_to_print);
                         }else if(*format == 's'){ //this is for a string
-                                char *string_to_print = va_arg(argp, char*);
-                                for(int i = 0; i < strlen(string_to_print); i++){
+                                string string_to_print = va_arg(argp, char*);
+                                for(int i = 0; i < string_to_print.length(); i++){
                                                 putchar(string_to_print[i]);
                                 }
                         }else if(*format == 'd'){ //this is for an integer

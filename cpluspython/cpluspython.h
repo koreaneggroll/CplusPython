@@ -16,6 +16,8 @@
 #define IN ,
 #define IS ==
 #define ISNT !=
+#define True 1
+#define False 0
 
 
 //CLASSES
@@ -113,6 +115,27 @@ typedef Int_List Ilist;
 char ord(int ascii);
 //Converts from character to ascii
 int chr(char c);
+
+
+void print_int(int int_to_print);
+
+
+/*Prints an integer array*/
+void print_int_arr(int *arr, int size);
+
+
+/*Prints a double array*/
+void print_double_arr(double *arr, int size);
+
+/*Prints a long array*/
+void print_long_arr(long *arr, int size);
+
+
+/*Prints a string array*/
+void print_str_arr(char **arr, int size);
+
+/*Basically printf but has array printing built in*/
+void print(char *format, ...);
 
 
 
